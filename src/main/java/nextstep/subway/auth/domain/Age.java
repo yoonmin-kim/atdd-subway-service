@@ -33,10 +33,10 @@ public class Age {
     }
 
     private boolean isChildren() {
-        return age >= 6 && age < 13;
+        return age != null && (age >= 6 && age < 13);
     }
 
     private boolean isTeenager() {
-        return age >= 13 && age < 19;
+        return age != null && (age >= 13 && age < 19);
     }
 }

@@ -1,7 +1,6 @@
 package nextstep.subway.auth.domain;
 
 import nextstep.subway.auth.domain.discount.DiscountPolicy;
-import nextstep.subway.auth.domain.discount.NoDiscountPolicy;
 
 public class LoginMember {
     private Long id;
@@ -18,9 +17,6 @@ public class LoginMember {
     }
 
     public DiscountPolicy createDiscountPolicy() {
-        if (age == null) {
-            return new NoDiscountPolicy();
-        }
         return age.createDiscountPolicy();
     }
 

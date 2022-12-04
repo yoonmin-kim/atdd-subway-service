@@ -39,6 +39,10 @@ public class Path {
         return lines;
     }
 
+    public void applyDiscountPolicy(DiscountPolicy discountPolicy) {
+        cost = discountPolicy.discount(cost);
+    }
+
     public List<Station> getStations() {
         return stations;
     }
@@ -49,9 +53,5 @@ public class Path {
 
     public int getCost() {
         return cost;
-    }
-
-    public void applyDiscountPolicy(DiscountPolicy discountPolicy) {
-        cost = discountPolicy.discount(cost);
     }
 }
